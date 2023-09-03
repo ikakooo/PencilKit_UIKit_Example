@@ -17,6 +17,9 @@
 		AC17AD632AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD622AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITestsLaunchTests.swift */; };
 		AC17AD732AA4EE680050ADD8 /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD722AA4EE680050ADD8 /* PKCanvas.swift */; };
 		AC17AD752AA4EEB30050ADD8 /* PencilKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD742AA4EEB30050ADD8 /* PencilKitManager.swift */; };
+		AC17AD7C2AA4FE810050ADD8 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD7B2AA4FE810050ADD8 /* UIImage+Extensions.swift */; };
+		AC17AD7E2AA4FF0A0050ADD8 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD7D2AA4FF0A0050ADD8 /* UIAlertController+Extensions.swift */; };
+		AC17AD802AA50C1B0050ADD8 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD7F2AA50C1B0050ADD8 /* UIApplication+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		AC17AD622AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKit_UIKit_ExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AC17AD722AA4EE680050ADD8 /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
 		AC17AD742AA4EEB30050ADD8 /* PencilKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitManager.swift; sourceTree = "<group>"; };
+		AC17AD7B2AA4FE810050ADD8 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		AC17AD7D2AA4FF0A0050ADD8 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		AC17AD7F2AA50C1B0050ADD8 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,9 @@
 		AC17AD3E2AA4E0640050ADD8 /* PencilKit_UIKit_Example */ = {
 			isa = PBXGroup;
 			children = (
-				AC17AD712AA4EE360050ADD8 /* PencilKitView */,
+				AC17AD7A2AA4FE600050ADD8 /* Extensions */,
 				AC17AD702AA4EA1B0050ADD8 /* App */,
+				AC17AD712AA4EE360050ADD8 /* PencilKitView */,
 				AC17AD6F2AA4E9C90050ADD8 /* UI */,
 				AC17AD4D2AA4E06A0050ADD8 /* Info.plist */,
 			);
@@ -152,6 +159,16 @@
 				AC17AD742AA4EEB30050ADD8 /* PencilKitManager.swift */,
 			);
 			path = PencilKitView;
+			sourceTree = "<group>";
+		};
+		AC17AD7A2AA4FE600050ADD8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC17AD7B2AA4FE810050ADD8 /* UIImage+Extensions.swift */,
+				AC17AD7D2AA4FF0A0050ADD8 /* UIAlertController+Extensions.swift */,
+				AC17AD7F2AA50C1B0050ADD8 /* UIApplication+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +304,10 @@
 				AC17AD732AA4EE680050ADD8 /* PKCanvas.swift in Sources */,
 				AC17AD752AA4EEB30050ADD8 /* PencilKitManager.swift in Sources */,
 				AC17AD442AA4E0640050ADD8 /* PencilKitViewController.swift in Sources */,
+				AC17AD7C2AA4FE810050ADD8 /* UIImage+Extensions.swift in Sources */,
+				AC17AD7E2AA4FF0A0050ADD8 /* UIAlertController+Extensions.swift in Sources */,
 				AC17AD402AA4E0640050ADD8 /* AppDelegate.swift in Sources */,
+				AC17AD802AA50C1B0050ADD8 /* UIApplication+Extensions.swift in Sources */,
 				AC17AD422AA4E0640050ADD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -445,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -464,11 +484,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PencilKit_UIKit_Example/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save the Snapshot photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,11 +512,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PencilKit_UIKit_Example/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save the Snapshot photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
