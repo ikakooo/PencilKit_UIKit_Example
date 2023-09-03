@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		AC17AD402AA4E0640050ADD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD3F2AA4E0640050ADD8 /* AppDelegate.swift */; };
 		AC17AD422AA4E0640050ADD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD412AA4E0640050ADD8 /* SceneDelegate.swift */; };
-		AC17AD442AA4E0640050ADD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD432AA4E0640050ADD8 /* ViewController.swift */; };
-		AC17AD472AA4E0640050ADD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC17AD452AA4E0640050ADD8 /* Main.storyboard */; };
+		AC17AD442AA4E0640050ADD8 /* PencilKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD432AA4E0640050ADD8 /* PencilKitViewController.swift */; };
 		AC17AD492AA4E06A0050ADD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC17AD482AA4E06A0050ADD8 /* Assets.xcassets */; };
 		AC17AD4C2AA4E06A0050ADD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC17AD4A2AA4E06A0050ADD8 /* LaunchScreen.storyboard */; };
 		AC17AD572AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD562AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleTests.swift */; };
 		AC17AD612AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD602AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITests.swift */; };
 		AC17AD632AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD622AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITestsLaunchTests.swift */; };
+		AC17AD732AA4EE680050ADD8 /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD722AA4EE680050ADD8 /* PKCanvas.swift */; };
+		AC17AD752AA4EEB30050ADD8 /* PencilKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17AD742AA4EEB30050ADD8 /* PencilKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,7 @@
 		AC17AD3C2AA4E0640050ADD8 /* PencilKit_UIKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PencilKit_UIKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC17AD3F2AA4E0640050ADD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC17AD412AA4E0640050ADD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC17AD432AA4E0640050ADD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AC17AD462AA4E0640050ADD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC17AD432AA4E0640050ADD8 /* PencilKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitViewController.swift; sourceTree = "<group>"; };
 		AC17AD482AA4E06A0050ADD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC17AD4B2AA4E06A0050ADD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC17AD4D2AA4E06A0050ADD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		AC17AD5C2AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PencilKit_UIKit_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC17AD602AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKit_UIKit_ExampleUITests.swift; sourceTree = "<group>"; };
 		AC17AD622AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKit_UIKit_ExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC17AD722AA4EE680050ADD8 /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
+		AC17AD742AA4EEB30050ADD8 /* PencilKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +101,9 @@
 		AC17AD3E2AA4E0640050ADD8 /* PencilKit_UIKit_Example */ = {
 			isa = PBXGroup;
 			children = (
-				AC17AD3F2AA4E0640050ADD8 /* AppDelegate.swift */,
-				AC17AD412AA4E0640050ADD8 /* SceneDelegate.swift */,
-				AC17AD432AA4E0640050ADD8 /* ViewController.swift */,
-				AC17AD452AA4E0640050ADD8 /* Main.storyboard */,
-				AC17AD482AA4E06A0050ADD8 /* Assets.xcassets */,
-				AC17AD4A2AA4E06A0050ADD8 /* LaunchScreen.storyboard */,
+				AC17AD712AA4EE360050ADD8 /* PencilKitView */,
+				AC17AD702AA4EA1B0050ADD8 /* App */,
+				AC17AD6F2AA4E9C90050ADD8 /* UI */,
 				AC17AD4D2AA4E06A0050ADD8 /* Info.plist */,
 			);
 			path = PencilKit_UIKit_Example;
@@ -125,6 +124,34 @@
 				AC17AD622AA4E06A0050ADD8 /* PencilKit_UIKit_ExampleUITestsLaunchTests.swift */,
 			);
 			path = PencilKit_UIKit_ExampleUITests;
+			sourceTree = "<group>";
+		};
+		AC17AD6F2AA4E9C90050ADD8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC17AD432AA4E0640050ADD8 /* PencilKitViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AC17AD702AA4EA1B0050ADD8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AC17AD3F2AA4E0640050ADD8 /* AppDelegate.swift */,
+				AC17AD412AA4E0640050ADD8 /* SceneDelegate.swift */,
+				AC17AD482AA4E06A0050ADD8 /* Assets.xcassets */,
+				AC17AD4A2AA4E06A0050ADD8 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AC17AD712AA4EE360050ADD8 /* PencilKitView */ = {
+			isa = PBXGroup;
+			children = (
+				AC17AD722AA4EE680050ADD8 /* PKCanvas.swift */,
+				AC17AD742AA4EEB30050ADD8 /* PencilKitManager.swift */,
+			);
+			path = PencilKitView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +260,6 @@
 			files = (
 				AC17AD4C2AA4E06A0050ADD8 /* LaunchScreen.storyboard in Resources */,
 				AC17AD492AA4E06A0050ADD8 /* Assets.xcassets in Resources */,
-				AC17AD472AA4E0640050ADD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC17AD442AA4E0640050ADD8 /* ViewController.swift in Sources */,
+				AC17AD732AA4EE680050ADD8 /* PKCanvas.swift in Sources */,
+				AC17AD752AA4EEB30050ADD8 /* PencilKitManager.swift in Sources */,
+				AC17AD442AA4E0640050ADD8 /* PencilKitViewController.swift in Sources */,
 				AC17AD402AA4E0640050ADD8 /* AppDelegate.swift in Sources */,
 				AC17AD422AA4E0640050ADD8 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +325,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AC17AD452AA4E0640050ADD8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC17AD462AA4E0640050ADD8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AC17AD4A2AA4E06A0050ADD8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +466,6 @@
 				INFOPLIST_FILE = PencilKit_UIKit_Example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -474,7 +493,6 @@
 				INFOPLIST_FILE = PencilKit_UIKit_Example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
